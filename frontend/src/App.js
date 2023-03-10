@@ -1,10 +1,28 @@
 import React from "react";
 import "./App.css";
 
+import {
+	Articles,
+	Features,
+	Footer,
+	Header,
+	MoreInfo,
+	Navbar,
+	Showcase,
+	WhyBudget,
+} from "./containers/baseContainers";
+
 const App = () => {
 	return (
 		<div>
-			<h1>hello world</h1>
+			<Navbar />
+			<Header />
+			<Features />
+			<Showcase />
+			<MoreInfo />
+			<WhyBudget />
+			<Articles />
+			<Footer />
 		</div>
 	);
 };
