@@ -8,6 +8,7 @@ const Navbar = () => {
 			<div className="budgetMe__navbar-links">
 				<div className="budgetMe__navbar-links_logo">
 					<img src={logo} alt="" />
+					<p>BudgetMe</p>
 				</div>
 				<div className="budgetMe__navbar-links_container">
 					<p>
