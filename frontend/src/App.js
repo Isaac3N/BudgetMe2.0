@@ -15,8 +15,11 @@ import {
 const App = () => {
 	return (
 		<div>
-			<Navbar />
-			<Header />
+			<div className="gradient__bg">
+				<Navbar />
+				<Header />
+			</div>
+
 			<Features />
 			<Showcase />
 			<MoreInfo />
