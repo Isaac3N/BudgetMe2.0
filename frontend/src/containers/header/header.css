@@ -12,14 +12,15 @@
 
 	width: 100vw;
 	min-height: calc(100vh - 18rem);
-
-	/* margin: 10rem 50rem 10rem 50rem; */
 }
 
 .budgetMe__header-content h1 {
 	font-family: var(--font-family);
 	font-weight: 800;
-	font-size: 6rem;
+	font-size: 6.4rem;
+	line-height: 8rem;
+	text-align: center;
+	width: 90rem;
 
 	margin-top: 1rem;
 }
@@ -35,6 +36,9 @@
 	font-family: var(--font-family);
 	font-weight: 600;
 	font-size: 2.4rem;
+	width: 70rem;
+
+	text-align: center;
 
 	color: #fff;
 
@@ -77,4 +81,53 @@
 	border-color: #39ff14;
 
 	animation: box 3s infinite;
+}
+
+/* image 1 */
+
+.budgetMe__header-img1 img {
+	position: absolute;
+
+	margin-top: 0.5rem;
+	right: 7%;
+	height: 15rem;
+	width: 20rem;
+}
+
+.budgetMe__header-img2 img {
+	position: absolute;
+
+	margin-bottom: 0.5rem;
+	left: 7%;
+	bottom: 7%;
+	height: 13rem;
+	width: 17rem;
+}
+
+.budgetMe__header-blob img {
+	position: absolute;
+
+	width: 25rem;
+	margin-bottom: 0.5rem;
+	right: 7%;
+	bottom: 7%;
+}
+
+.float {
+	animation-name: ani-float;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes ani-float {
+	0% {
+		transform: translate(0, 0px);
+	}
+	50% {
+		transform: translate(0, 15px);
+	}
+	100% {
+		transform: translate(0, -0px);
+	}
 }
