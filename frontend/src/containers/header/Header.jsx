@@ -21,6 +21,32 @@ const h1Variant = {
 	},
 };
 
+const imageVariants = {
+	hidden: {
+		opacity: 0,
+	},
+	visible: {
+		opacity: 1,
+		transition: { delay: 1, duration: 1.5 },
+	},
+
+	exit: {
+		x: "-100vw",
+		transition: { ease: "easeInOut" },
+	},
+};
+
+const starVariants = {
+	hidden: {
+		opacity: 0,
+	},
+	visible: {
+		opacity: 1,
+		y: ["-10vh", "10vh", "-10vh"],
+		transition: { delay: 1, duration: 4, yoyo: Infinity },
+	},
+};
+
 const texts = [
 	"Hey 👋 , start tracking you income and expenses with budgetMe 🇳🇬",
 	"Salut 👋 , commencez à suivre vos revenus et dépenses avec budgetMe 🇫🇷",
@@ -35,7 +61,7 @@ const FadingText = ({ text, key }) => {
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
-			transition={{ duration: 0.5 }}
+			transition={{ duration: 2 }}
 		>
 			{text}
 		</motion.div>
@@ -48,7 +74,7 @@ const Header = () => {
 	useEffect(() => {
 		const interval = setInterval(() => {
 			setTextIndex((index) => (index + 1) % texts.length);
-		}, 3000);
+		}, 5000);
 
 		return () => clearInterval(interval);
 	}, []);
@@ -57,7 +83,7 @@ const Header = () => {
 			<motion.div className="budgetMe__header-content">
 				<p>
 					<AnimatePresence mode="wait">
-						<FadingText text={texts[textIndex]} delay={1} />
+						<FadingText text={texts[textIndex]} />
 					</AnimatePresence>
 				</p>
 
@@ -85,7 +111,7 @@ const Header = () => {
 								.pauseFor(2000)
 								.deleteChars(9)
 								.typeString("income!")
-								.pauseFor(10000)
+								.pauseFor(50000)
 								.deleteChars(7)
 								.start();
 						}}
@@ -96,20 +122,38 @@ const Header = () => {
 					<span>Get Started</span>
 				</button>
 			</motion.div>
-			<div className="budgetMe__header-img1">
-				<img src={image1} alt="image1" />
-			</div>
+			<motion.div
+				variants={imageVariants}
+				initial="hidden"
+				animate="visible"
+				exit="exit"
+				className="budgetMe__header-img1"
+			>
+				<img animate={{}} src={image1} alt="image1" />
+			</motion.div>
 
-			<div className="budgetMe__header-img2">
+			<motion.div
+				variants={imageVariants}
+				initial="hidden"
+				animate="visible"
+				exit="exit"
+				className="budgetMe__header-img2"
+			>
 				<img src={image2} alt="image2" />
-			</div>
+			</motion.div>
 
-			<div className="budgetMe__header-blob float">
+			<motion.div
+				variants={imageVariants}
+				initial="hidden"
+				animate="visible"
+				exit="exit"
+				className="budgetMe__header-blob float"
+			>
 				<img src={blob} alt="blob" />
-			</div>
+			</motion.div>
 
 			<div className="budgetMe__header-star">
-				<img src={star} alt="star" />
+				<img className="float" src={star} alt="star" />
 			</div>
 		</section>
 	);

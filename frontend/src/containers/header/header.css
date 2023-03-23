@@ -106,7 +106,7 @@
 	width: 23rem;
 }
 
-.budgetMe__header-star img {
+.budgetMe__header-star {
 	position: absolute;
 	right: 80%;
 	top: 40%;
