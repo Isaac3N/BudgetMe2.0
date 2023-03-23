@@ -92,8 +92,8 @@
 
 	margin-top: 0.5rem;
 	right: 7%;
-	height: 15rem;
-	width: 20rem;
+	height: 25rem;
+	width: 25rem;
 }
 
 .budgetMe__header-img2 img {
@@ -102,8 +102,15 @@
 	margin-bottom: 0.5rem;
 	left: 7%;
 	bottom: 7%;
-	height: 13rem;
-	width: 17rem;
+	height: 20rem;
+	width: 23rem;
+}
+
+.budgetMe__header-star img {
+	position: absolute;
+	right: 80%;
+	top: 40%;
+	left: 18%;
 }
 
 .budgetMe__header-blob img {

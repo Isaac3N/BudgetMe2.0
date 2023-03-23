@@ -1,20 +1,74 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./header.css";
 
 import Typewriter from "typewriter-effect";
+import { motion, AnimatePresence } from "framer-motion";
 
-import image1 from "../../assets/header_image1.jpg";
-import image2 from "../../assets/header_image2.jpg";
+import image1 from "../../assets/header_image1.png";
+import image2 from "../../assets/header_image2.png";
+
 import blob from "../../assets/blob.svg";
 
-const Header = () => {
+import star from "../../assets/star.svg";
+
+const h1Variant = {
+	hidden: {
+		opacity: 0,
+	},
+	visible: {
+		opacity: 1,
+		transition: { delay: 0.3, duration: 1.5 },
+	},
+};
+
+const texts = [
+	"Hey 👋 , start tracking you income and expenses with budgetMe 🇳🇬",
+	"Salut 👋 , commencez à suivre vos revenus et dépenses avec budgetMe 🇫🇷",
+	"Hēi 👋, kāishǐ gēnzōng nín de shōurù hé zhīchū shǐyòng budgetMe 🇨🇳",
+	"mrhban 👋 , abda fi tatabue dakhlak wanafaqatik biastikhdam budgetMe 🇦🇪 ",
+];
+
+const FadingText = ({ text, key }) => {
 	return (
-		<div className="budgetMe__header section__padding" id="home">
-			<div className="budgetMe__header-content">
-				<p>Hey 👋 , start tracking you income and expenses with budgetMe 🇳🇬 </p>
-				<h1 className="gradient__text">
+		<motion.div
+			key={key}
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 0.5 }}
+		>
+			{text}
+		</motion.div>
+	);
+};
+
+const Header = () => {
+	const [textIndex, setTextIndex] = useState(0);
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setTextIndex((index) => (index + 1) % texts.length);
+		}, 3000);
+
+		return () => clearInterval(interval);
+	}, []);
+	return (
+		<section className="budgetMe__header section__padding" id="home">
+			<motion.div className="budgetMe__header-content">
+				<p>
+					<AnimatePresence mode="wait">
+						<FadingText text={texts[textIndex]} delay={1} />
+					</AnimatePresence>
+				</p>
+
+				<motion.h1
+					variants={h1Variant}
+					initial="hidden"
+					animate="visible"
+					className="gradient__text"
+				>
 					Gain Financial Freedom, with BudgetMe.
-				</h1>
+				</motion.h1>
 				<h3>
 					<Typewriter
 						options={{
@@ -26,13 +80,13 @@ const Header = () => {
 
 								.typeString("BudgetMe allows you to track your goals!")
 								.pauseFor(2000)
-								.deleteChars(5)
+								.deleteChars(6)
 								.typeString("expenses!")
 								.pauseFor(2000)
-								.deleteChars(8)
+								.deleteChars(9)
 								.typeString("income!")
-								.pauseFor(2000)
-								.deleteChars(6)
+								.pauseFor(10000)
+								.deleteChars(7)
 								.start();
 						}}
 					/>
@@ -41,7 +95,7 @@ const Header = () => {
 				<button type="button">
 					<span>Get Started</span>
 				</button>
-			</div>
+			</motion.div>
 			<div className="budgetMe__header-img1">
 				<img src={image1} alt="image1" />
 			</div>
@@ -53,7 +107,11 @@ const Header = () => {
 			<div className="budgetMe__header-blob float">
 				<img src={blob} alt="blob" />
 			</div>
-		</div>
+
+			<div className="budgetMe__header-star">
+				<img src={star} alt="star" />
+			</div>
+		</section>
 	);
 };
 
