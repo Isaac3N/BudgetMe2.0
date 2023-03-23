@@ -29,22 +29,6 @@ const imageVariants = {
 		opacity: 1,
 		transition: { delay: 1, duration: 1.5 },
 	},
-
-	exit: {
-		x: "-100vw",
-		transition: { ease: "easeInOut" },
-	},
-};
-
-const starVariants = {
-	hidden: {
-		opacity: 0,
-	},
-	visible: {
-		opacity: 1,
-		y: ["-10vh", "10vh", "-10vh"],
-		transition: { delay: 1, duration: 4, yoyo: Infinity },
-	},
 };
 
 const texts = [
@@ -136,7 +120,6 @@ const Header = () => {
 				variants={imageVariants}
 				initial="hidden"
 				animate="visible"
-				exit="exit"
 				className="budgetMe__header-img2"
 			>
 				<img src={image2} alt="image2" />
@@ -146,15 +129,19 @@ const Header = () => {
 				variants={imageVariants}
 				initial="hidden"
 				animate="visible"
-				exit="exit"
 				className="budgetMe__header-blob float"
 			>
 				<img src={blob} alt="blob" />
 			</motion.div>
 
-			<div className="budgetMe__header-star">
+			<motion.div
+				variants={imageVariants}
+				initial="hidden"
+				animate="visible"
+				className="budgetMe__header-star"
+			>
 				<img className="float" src={star} alt="star" />
-			</div>
+			</motion.div>
 		</section>
 	);
 };

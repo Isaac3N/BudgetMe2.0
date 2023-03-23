@@ -1,6 +1,24 @@
 import React from "react";
 import "./navbar.css";
 import logo from "../../assets/logo.svg";
+import { motion } from "framer-motion";
+
+const textVariants = {
+	hidden: {
+		opacity: 0,
+		x: -50,
+	},
+	visible: {
+		opacity: 1,
+		x: -5,
+
+		transition: {
+			duration: 2,
+			delay: 2,
+			ease: "easeInOut",
+		},
+	},
+};
 
 const Navbar = () => {
 	return (
@@ -8,7 +26,9 @@ const Navbar = () => {
 			<div className="budgetMe__navbar-links">
 				<div className="budgetMe__navbar-links_logo">
 					<img src={logo} alt="" />
-					<p>BudgetMe</p>
+					<motion.p variants={textVariants} initial="hidden" animate="visible">
+						BudgetMe
+					</motion.p>
 				</div>
 				<div className="budgetMe__navbar-links_container">
 					<p>
