@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.css";
 import logo from "../../assets/logo.svg";
 import { motion } from "framer-motion";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 const textVariants = {
 	hidden: {
@@ -21,8 +22,30 @@ const textVariants = {
 };
 
 const Navbar = () => {
+	const [click, setClick] = useState(false);
+	const { scroll } = useLocomotiveScroll();
+
+	const handleScroll = (id) => {
+		let e = document.querySelector(id);
+		setClick(!click);
+
+		scroll.scrollTo(e, {
+			offset: "-100",
+			duration: "200",
+			easing: [0.25, 0.0, 0.35, 1.0],
+		});
+	};
+
 	return (
-		<div className="budgetMe__navbar">
+		<div
+			click={click}
+			initial={{
+				y: "-100%",
+			}}
+			animate={{ y: 0 }}
+			transition={{ duration: 2, delay: 2 }}
+			className="budgetMe__navbar"
+		>
 			<div className="budgetMe__navbar-links">
 				<div className="budgetMe__navbar-links_logo">
 					<img src={logo} alt="" />
@@ -31,24 +54,50 @@ const Navbar = () => {
 					</motion.p>
 				</div>
 				<div className="budgetMe__navbar-links_container">
-					<p>
+					<motion.p
+						onClick={() => handleScroll()}
+						whileHover={{ scale: 1.1, y: -5 }}
+						whileTap={{ scale: 0.9, y: 0 }}
+					>
 						<a href="#home">Home</a>
-					</p>
-					<p>
+					</motion.p>
+					<motion.p
+						onClick={() => handleScroll()}
+						whileHover={{ scale: 1.1, y: -5 }}
+						whileTap={{ scale: 0.9, y: 0 }}
+					>
 						<a href="#moreInfo">What is BudgetMe</a>
-					</p>
-					<p>
+					</motion.p>
+					<motion.p
+						onClick={() => handleScroll()}
+						whileHover={{ scale: 1.1, y: -5 }}
+						whileTap={{ scale: 0.9, y: 0 }}
+					>
 						<a href="#showcase">Features</a>
-					</p>
-					<p>
+					</motion.p>
+					<motion.p
+						onClick={() => handleScroll()}
+						whileHover={{ scale: 1.1, y: -5 }}
+						whileTap={{ scale: 0.9, y: 0 }}
+					>
 						<a href="#articles">Articles</a>
-					</p>
-					<p>
+					</motion.p>
+					<motion.p
+						onClick={() => handleScroll()}
+						whileHover={{ scale: 1.1, y: -5 }}
+						whileTap={{ scale: 0.9, y: 0 }}
+					>
 						<a href="#dashboard">My Dashboard</a>
-					</p>
+					</motion.p>
 				</div>
 				<div className="budgetMe__navbar-sign">
-					<p>Sign In</p>
+					<motion.p
+						onClick={() => handleScroll()}
+						whileHover={{ scale: 1.01, y: -3 }}
+						whileTap={{ scale: 0.09, y: 0 }}
+					>
+						Sign In
+					</motion.p>
 					<button type="button">
 						<span>Sign Up</span>
 						<i />
