@@ -7,3 +7,58 @@
 	align-items: center;
 	justify-content: center;
 }
+
+.budgetMe__features-content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	margin-right: 15rem;
+	margin-left: 5rem;
+}
+
+.budgetMe__features-image {
+	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+	align-items: center;
+	margin-left: 15rem;
+	margin-right: 5rem;
+}
+
+.budgetMe__features-image img {
+	width: 63rem;
+	height: 63rem;
+}
+
+.budgetMe__features-content h4 {
+	font-family: var(--font-family);
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 30px;
+	color: #c7ddd1;
+}
+
+.budgetMe__features-content h1 {
+	font-family: var(--font-family);
+	font-style: normal;
+	font-weight: 800;
+	font-size: 34px;
+	line-height: 45px;
+	margin: 1rem 0;
+	color: #fff;
+}
+.budgetMe__features-content p {
+	font-family: var(--font-family);
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 30px;
+
+	color: #fff;
+
+	margin-bottom: 2rem;
+}
