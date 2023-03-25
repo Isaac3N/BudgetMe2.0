@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./navbar.css";
 import logo from "../../assets/logo.svg";
 import { motion } from "framer-motion";
-import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 const textVariants = {
 	hidden: {
@@ -23,17 +22,9 @@ const textVariants = {
 
 const Navbar = () => {
 	const [click, setClick] = useState(false);
-	const { scroll } = useLocomotiveScroll();
 
 	const handleScroll = (id) => {
-		let e = document.querySelector(id);
 		setClick(!click);
-
-		scroll.scrollTo(e, {
-			offset: "-100",
-			duration: "200",
-			easing: [0.25, 0.0, 0.35, 1.0],
-		});
 	};
 
 	return (

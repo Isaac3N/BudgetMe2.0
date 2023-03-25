@@ -1,6 +1,7 @@
 .budgetMe__header {
 	display: flex;
 	flex-direction: row;
+	position: relative;
 }
 
 .budgetMe__header-content {
@@ -99,10 +100,10 @@
 .budgetMe__header-img2 img {
 	position: absolute;
 
-	margin-bottom: 0.5rem;
 	left: 7%;
 	bottom: 7%;
 	height: 20rem;
+	right: 0;
 	width: 23rem;
 }
 

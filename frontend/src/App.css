@@ -17,37 +17,37 @@ a {
 
 .gradient__bg {
 	background: -moz-radial-gradient(
-		circle at 3% 25%,
+		circle at 7% 30%,
 		rgba(0, 115, 32, 1) 0%,
-		rgba(6, 8, 9, 1) 100%
+		rgba(6, 8, 9, 1) 30%
 	);
 
 	/* safari 5.1+,chrome 10+ */
 	background: -webkit-radial-gradient(
-		circle at 3% 25%,
+		circle at 7% 30%,
 		rgba(4, 78, 25, 1) 0%,
-		rgba(6, 8, 9, 1) 100%
+		rgba(6, 8, 9, 1) 30%
 	);
 
 	/* opera 11.10+ */
 	background: -o-radial-gradient(
-		circle at 3% 25%,
+		circle at 7% 30%,
 		rgba(4, 78, 25, 1) 0%,
-		rgba(6, 8, 9, 1) 100%
+		rgba(6, 8, 9, 1) 30%
 	);
 
 	/* ie 10+ */
 	background: -ms-radial-gradient(
-		circle at 3% 25%,
+		circle at 7% 30%,
 		rgba(4, 78, 25, 1) 0%,
-		rgba(6, 8, 9, 1) 100%
+		rgba(6, 8, 9, 1) 30%
 	);
 
 	/* global 92%+ browsers support */
 	background: radial-gradient(
-		circle at 3% 25%,
+		circle at 7% 30%,
 		rgba(4, 78, 25, 1) 0%,
-		rgba(6, 8, 9, 1) 100%
+		rgba(6, 8, 9, 1) 30%
 	);
 }
 

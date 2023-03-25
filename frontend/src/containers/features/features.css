@@ -1,0 +1,9 @@
+.budgetMe__features {
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	min-height: 100vh;
+
+	align-items: center;
+	justify-content: center;
+}
