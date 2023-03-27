@@ -1,6 +1,7 @@
 import React from "react";
 import "./features.css";
 import HeaderImage from "../../assets/header_image1.jpg";
+import SlideShow from "../../components/slideShow/slideshowSlider";
 
 const Features = () => {
 	return (
@@ -18,7 +19,8 @@ const Features = () => {
 				<h4>Try it out now !</h4>
 			</div>
 			<div className="budgetMe__features-image">
-				<img src={HeaderImage} alt="headerImage" />
+				{/* <img src={HeaderImage} alt="headerImage" /> */}
+				<SlideShow />
 			</div>
 		</div>
 	);
