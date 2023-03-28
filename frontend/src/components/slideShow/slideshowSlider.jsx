@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useRef } from "react";
-// import ImageList from "./ImageList";
-// import image1 from "../../assets/1.jpg";
-// import image2 from "../../assets/2.jpg";
-// import image3 from "../../assets/2.jpg";
+
+import ImageList from "./ImageList";
+import image1 from "../../assets/slideshow/1.png";
+import image2 from "../../assets/slideshow/2.png";
+import image3 from "../../assets/slideshow/3.png";
 
 import "./slideshow.css";
 
-const colors = ["#0088FE", "#00C49F", "#FFBB28"];
 const delay = 2500;
 
 function SlideShow() {
@@ -19,12 +19,14 @@ function SlideShow() {
 		}
 	}
 
+	const imageUrls = [image1, image2, image3];
+
 	useEffect(() => {
 		resetTimeout();
 		timeoutRef.current = setTimeout(
 			() =>
 				setIndex((prevIndex) =>
-					prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+					prevIndex === imageUrls.length - 1 ? 0 : prevIndex + 1
 				),
 			delay
 		);
@@ -40,13 +42,11 @@ function SlideShow() {
 				className="slideshowSlider"
 				style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
 			>
-				{colors.map((backgroundColor, index) => (
-					<div className="slide" key={index} style={{ backgroundColor }}></div>
-				))}
+				<ImageList key={index} className="slide" images={imageUrls} />
 			</div>
 
 			<div className="slideshowDots">
-				{colors.map((_, idx) => (
+				{imageUrls.map((_, idx) => (
 					<div
 						key={idx}
 						className={`slideshowDot${index === idx ? " active" : ""}`}
