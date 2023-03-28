@@ -32,12 +32,6 @@
 	width: 100%;
 }
 
-/* 
-.budgetMe__features-image img {
-	width: 63rem;
-	height: 63rem;
-} */
-
 .budgetMe__features-content h4 {
 	font-family: var(--font-family);
 	font-style: normal;
@@ -51,8 +45,9 @@
 	font-family: var(--font-family);
 	font-style: normal;
 	font-weight: 800;
-	font-size: 34px;
-	line-height: 45px;
+	font-size: 50px;
+	line-height: 50px;
+
 	margin: 1rem 0;
 	color: #fff;
 }
