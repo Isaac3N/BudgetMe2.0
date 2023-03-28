@@ -36,14 +36,13 @@ const Features = () => {
 					data-scroll-target="#pin"
 					className="budgetMe__features-content"
 				>
-					<h4>keeping an eye on your money has never been easier </h4>
-					<h1 className="gradient__text">
-						Data Analysis like you have never seen before
-					</h1>
+					<h4>Your goals are as valid as you are !!! </h4>
+					<h1 className="gradient__text">Keep Track of your financial goals</h1>
 					<p>
-						With BudgetMe, you can easily categorize your expenses and income,
-						allowing you to see where your money is going and identify areas
-						where you might be overspending or not allocating enough funds.
+						At BudgetMe we believe that it is important to celebrate goals and
+						take notes of setbacks in order to achieve our financial goals. So
+						we integrated a goal milestone app. Keep track of those moments and
+						look back on them when need arises
 					</p>
 					<h4>Try it out now !</h4>
 				</div>
@@ -54,16 +53,19 @@ const Features = () => {
 					data-scroll-target="#pin"
 					className="budgetMe__features-content"
 				>
-					<h4>keeping an eye on your money has never been easier </h4>
+					<h4>
+						Be on top of your business processes with BudgetMe Enterprise{" "}
+					</h4>
 					<h1 className="gradient__text">
-						Data Analysis like you have never seen before
+						The perfect way to skyrocket your SME
 					</h1>
 					<p>
-						With BudgetMe, you can easily categorize your expenses and income,
-						allowing you to see where your money is going and identify areas
-						where you might be overspending or not allocating enough funds.
+						Taking your SME to the next level requires understanding the need to
+						take risk. BudgetMe Enterprise aims to solve this problem by
+						streamlining the business decisions, assets, turnover and much in
+						order to avoid making an uninformed decision in hindsight.
 					</p>
-					<h4>Try it out now !</h4>
+					<h4>Coming Soon !</h4>
 				</div>
 			</div>
 
