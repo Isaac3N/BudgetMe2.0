@@ -14,7 +14,6 @@ const Features = () => {
 				<div
 					id="one"
 					data-scroll
-					// data-scroll-direction="vertical"
 					data-scroll-target="#pin"
 					data-scroll-speed="3"
 					className="budgetMe__features-content"
@@ -33,7 +32,6 @@ const Features = () => {
 				<div
 					id="two"
 					data-scroll
-					// data-scroll-direction="vertical"
 					data-scroll-speed="3"
 					data-scroll-target="#pin"
 					className="budgetMe__features-content"
@@ -52,7 +50,6 @@ const Features = () => {
 				<div
 					id="three"
 					data-scroll
-					// data-scroll-direction="vertical"
 					data-scroll-speed="7"
 					data-scroll-target="#pin"
 					className="budgetMe__features-content"
@@ -78,15 +75,7 @@ const Features = () => {
 				data-scroll-speed="2"
 				className="budgetMe__features-image"
 			>
-				{/* <img src={HeaderImage} alt="headerImage" /> */}
 				<SlideShow />
-
-				{/* <SlideShow
-					data-scroll
-					data-scroll-sticky
-					data-scroll-target="#pin"
-					data-scroll-speed="-1"
-				/> */}
 			</div>
 		</section>
 	);
