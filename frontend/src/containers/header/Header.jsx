@@ -63,11 +63,7 @@ const Header = () => {
 		return () => clearInterval(interval);
 	}, []);
 	return (
-		<section
-			// data-scroll-section
-			className="budgetMe__header section__padding"
-			id="home"
-		>
+		<section className="budgetMe__header section__padding" id="home">
 			<motion.div className="budgetMe__header-content">
 				<p>
 					<AnimatePresence mode="wait">

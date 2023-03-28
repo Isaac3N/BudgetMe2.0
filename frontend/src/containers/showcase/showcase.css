@@ -1,0 +1,9 @@
+.budgetMe__showcase {
+	display: flex;
+	position: relative;
+	min-height: 100vh;
+	/* width: 100vw; */
+
+	align-items: center;
+	justify-content: center;
+}
