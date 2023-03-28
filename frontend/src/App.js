@@ -6,8 +6,8 @@ import {
 	Footer,
 	Header,
 	MoreInfo,
-	Navbar,
 	Showcase,
+	Navbar,
 	WhyBudget,
 } from "./containers/baseContainers";
 
@@ -37,7 +37,7 @@ const App = () => {
 			>
 				<AnimatePresence>
 					<main data-scroll-container ref={containerRef}>
-						<div className="gradient__bg">
+						<div data-scroll-section className="gradient__bg">
 							<Navbar />
 							<Header />
 						</div>

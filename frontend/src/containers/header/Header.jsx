@@ -64,7 +64,7 @@ const Header = () => {
 	}, []);
 	return (
 		<section
-			data-scroll-section
+			// data-scroll-section
 			className="budgetMe__header section__padding"
 			id="home"
 		>

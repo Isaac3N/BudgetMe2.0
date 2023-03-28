@@ -37,7 +37,7 @@ const Navbar = () => {
 			transition={{ duration: 2, delay: 2 }}
 			className="budgetMe__navbar"
 		>
-			<div data-scroll-section className="budgetMe__navbar-links">
+			<div className="budgetMe__navbar-links">
 				<div className="budgetMe__navbar-links_logo">
 					<img src={logo} alt="" />
 					<motion.p variants={textVariants} initial="hidden" animate="visible">

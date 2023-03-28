@@ -1,6 +1,5 @@
 import React from "react";
 import "./features.css";
-import HeaderImage from "../../assets/1.jpg";
 
 import SlideShow from "../../components/slideShow/slideshowSlider";
 
@@ -17,7 +16,7 @@ const Features = () => {
 					data-scroll
 					// data-scroll-direction="vertical"
 					data-scroll-target="#pin"
-					data-scroll-speed="7"
+					data-scroll-speed="3"
 					className="budgetMe__features-content"
 				>
 					<h4>keeping an eye on your money has never been easier </h4>
