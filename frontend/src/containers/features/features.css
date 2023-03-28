@@ -1,6 +1,5 @@
 .budgetMe__features {
 	display: flex;
-	flex-direction: row;
 	position: relative;
 	min-height: 100vh;
 
@@ -8,30 +7,36 @@
 	justify-content: center;
 }
 
-.budgetMe__features-content {
-	flex: 1;
+.budgetMe__features-container {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: flex-start;
 
-	margin-right: 15rem;
+	width: 100%;
+}
+
+.budgetMe__features-content {
+	margin-right: 10rem;
 	margin-left: 5rem;
 }
 
 .budgetMe__features-image {
 	display: flex;
-	flex: 1;
+
 	justify-content: flex-end;
 	align-items: center;
-	margin-left: 15rem;
-	margin-right: 5rem;
+	margin-left: 10rem;
+	margin-right: 0rem;
+
+	width: 100%;
 }
 
+/* 
 .budgetMe__features-image img {
 	width: 63rem;
 	height: 63rem;
-}
+} */
 
 .budgetMe__features-content h4 {
 	font-family: var(--font-family);
@@ -62,3 +67,17 @@
 
 	margin-bottom: 2rem;
 }
+
+/* #one {
+	top: 10rem;
+	left: -60%;
+} */
+
+/* #one {
+	top: 3em;
+	left: 5em;
+} */
+/* 
+#two {
+	margin-top: 40rem;
+} */

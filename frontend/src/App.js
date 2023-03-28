@@ -43,6 +43,7 @@ const App = () => {
 						</div>
 
 						<Features />
+						<Header />
 						<Showcase />
 						<MoreInfo />
 						<WhyBudget />

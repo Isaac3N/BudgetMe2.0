@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
-import ImageList from "./ImageList";
-import image1 from "../../assets/1.jpg";
-import image2 from "../../assets/2.jpg";
-import image3 from "../../assets/2.jpg";
+// import ImageList from "./ImageList";
+// import image1 from "../../assets/1.jpg";
+// import image2 from "../../assets/2.jpg";
+// import image3 from "../../assets/2.jpg";
 
 import "./slideshow.css";
 
@@ -10,8 +10,8 @@ const colors = ["#0088FE", "#00C49F", "#FFBB28"];
 const delay = 2500;
 
 function SlideShow() {
-	const [index, setIndex] = React.useState(0);
-	const timeoutRef = React.useRef(null);
+	const [index, setIndex] = useState(0);
+	const timeoutRef = useRef(null);
 
 	function resetTimeout() {
 		if (timeoutRef.current) {
@@ -19,7 +19,7 @@ function SlideShow() {
 		}
 	}
 
-	React.useEffect(() => {
+	useEffect(() => {
 		resetTimeout();
 		timeoutRef.current = setTimeout(
 			() =>

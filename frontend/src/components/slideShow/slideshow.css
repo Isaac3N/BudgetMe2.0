@@ -4,6 +4,7 @@
 	margin: 0 auto;
 	overflow: hidden;
 	max-width: 500px;
+	width: 100%;
 }
 
 .slideshowSlider {
@@ -14,8 +15,8 @@
 .slide {
 	display: inline-block;
 
-	height: 400px;
-	width: 500px;
+	min-height: 500px;
+	width: 100%;
 	border-radius: 40px;
 }
 
