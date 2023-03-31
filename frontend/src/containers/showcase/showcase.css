@@ -1,9 +1,45 @@
 .budgetMe__showcase {
-	display: flex;
-	position: relative;
 	min-height: 100vh;
-	/* width: 100vw; */
+	height: auto;
+	width: 100vw;
+	margin: 0 auto;
+	overflow: hidden;
 
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+
+	position: relative;
+}
+
+.budgetMe__showcase-container {
+	display: flex;
+	position: absolute;
+	left: 0;
+	padding-left: 0px;
+
+	min-height: 100vh;
+
+	justify-content: flex-start;
 	align-items: center;
+}
+
+.budgetMe__section-images {
+	position: relative;
+	width: 1200px;
+	height: 100%;
+
+	margin-right: 2rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
+}
+
+.budgetMe__showcase-images img {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
 }

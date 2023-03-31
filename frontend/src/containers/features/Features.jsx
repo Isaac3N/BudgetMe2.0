@@ -74,7 +74,7 @@ const Features = () => {
 				data-scroll
 				data-scroll-sticky
 				data-scroll-target="#pin"
-				data-scroll-speed="2"
+				data-scroll-speed="12"
 				className="budgetMe__features-image"
 			>
 				<SlideShow />
