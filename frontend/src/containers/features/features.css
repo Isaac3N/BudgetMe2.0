@@ -1,7 +1,7 @@
 .budgetMe__features {
 	display: flex;
 	position: relative;
-	height: 220vh;
+	height: 240vh;
 	align-items: center;
 	justify-content: center;
 }
@@ -66,7 +66,7 @@
 
 #stick {
 	position: relative;
-	top: -450px;
+	top: -520px;
 }
 
 #one {
