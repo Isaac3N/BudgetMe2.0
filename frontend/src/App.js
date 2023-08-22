@@ -16,6 +16,7 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 
 import { AnimatePresence } from "framer-motion";
 import ScrollTriggerProxy from "./components/gsap/ScrollTriggerProxy";
+import Shop from "./containers/showcase/Showcase";
 
 const App = () => {
 	const containerRef = useRef(null);
@@ -44,7 +45,6 @@ const App = () => {
 							<Header />
 						</div>
 						<Features />
-						{/* <Showcase /> */}
 
 						<MoreInfo />
 						<WhyBudget />
